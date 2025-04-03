@@ -1,33 +1,25 @@
-def basic_calculator():
-    try:
-        # Ask the user for two numbers
-        num1 = float(input("Enter the first number: "))
-        num2 = float(input("Enter the second number: "))
+# Step 1: Create an empty list
+my_list = []
 
-        # Ask the user for the operation
-        operation = input("Enter the operation (+, -, *, /): ")
+# Step 2: Append elements 10, 20, 30, 40
+my_list.append(10)
+my_list.append(20)
+my_list.append(30)
+my_list.append(40)
 
-        # Perform the operation
-        if operation == "+":
-            result = num1 + num2
-        elif operation == "-":
-            result = num1 - num2
-        elif operation == "*":
-            result = num1 * num2
-        elif operation == "/":
-            if num2 == 0:
-                print("Error: Cannot divide by zero.")
-                return
-            result = num1 / num2
-        else:
-            print("Invalid operation! Please use +, -, *, or /.")
-            return
+# Step 3: Insert 15 at the second position (index 1)
+my_list.insert(1, 15)
 
-        # Print the result
-        print(f"{num1} {operation} {num2} = {result}")
+# Step 4: Extend my_list with another list [50, 60, 70]
+my_list.extend([50, 60, 70])
 
-    except ValueError:
-        print("Invalid input! Please enter numbers only.")
+# Step 5: Remove the last element
+my_list.pop()
 
-# Run the calculator
-basic_calculator()
+# Step 6: Sort the list in ascending order
+my_list.sort()
+
+# Step 7: Find and print the index of value 30
+index_of_30 = my_list.index(30)
+print(f"Sorted List: {my_list}")
+print(f"Index of 30: {index_of_30}")
